@@ -1,0 +1,19 @@
+Ticker,Measure,Estimator,True value (%),Bias (pp),Bias (% of true)
+JPM,VAR,Historical,4.6621,-0.0442,-0.95
+JPM,VAR,Parametric Normal,4.6621,-0.5461,-11.71
+JPM,VAR,Parametric t,4.6621,0.0012,0.03
+JPM,CVAR,Historical,7.2601,-0.087,-1.2
+JPM,CVAR,Parametric Normal,7.2601,-2.533,-34.89
+JPM,CVAR,Parametric t,7.2601,0.0262,0.36
+AAPL,VAR,Historical,4.9105,-0.07,-1.43
+AAPL,VAR,Parametric Normal,4.9105,-0.6397,-13.03
+AAPL,VAR,Parametric t,4.9105,-0.0089,-0.18
+AAPL,CVAR,Historical,7.3076,-0.1178,-1.61
+AAPL,CVAR,Parametric Normal,7.3076,-2.399,-32.83
+AAPL,CVAR,Parametric t,7.3076,0.0017,0.02
+TSLA,VAR,Historical,10.0195,-0.1207,-1.21
+TSLA,VAR,Parametric Normal,10.0195,-1.3046,-13.02
+TSLA,VAR,Parametric t,10.0195,-0.0156,-0.16
+TSLA,CVAR,Historical,15.1001,-0.227,-1.5
+TSLA,CVAR,Parametric Normal,15.1001,-5.0872,-33.69
+TSLA,CVAR,Parametric t,15.1001,0.0087,0.06

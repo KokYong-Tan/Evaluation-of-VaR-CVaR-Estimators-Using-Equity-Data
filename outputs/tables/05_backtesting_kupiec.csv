@@ -1,0 +1,28 @@
+Ticker,Period,Method,N_obs,N_exceed,Obs rate (%),Exp rate (%),LR stat,p-value,Reject H0 (5%)?
+JPM,full,Historical,2266,39,1.721,1.0,9.7902,0.0018,Yes
+JPM,full,Parametric Normal,2266,51,2.251,1.0,26.4244,0.0,Yes
+JPM,full,Parametric t,2266,37,1.633,1.0,7.6953,0.0055,Yes
+JPM,calm,Historical,754,9,1.194,1.0,0.2689,0.6041,No
+JPM,calm,Parametric Normal,754,15,1.989,1.0,5.7896,0.0161,Yes
+JPM,calm,Parametric t,754,7,0.928,1.0,0.04,0.8414,No
+JPM,stressed,Historical,232,10,4.31,1.0,14.1201,0.0002,Yes
+JPM,stressed,Parametric Normal,232,15,6.466,1.0,31.3478,0.0,Yes
+JPM,stressed,Parametric t,232,10,4.31,1.0,14.1201,0.0002,Yes
+AAPL,full,Historical,2266,31,1.368,1.0,2.781,0.0954,No
+AAPL,full,Parametric Normal,2266,44,1.942,1.0,15.9194,0.0001,Yes
+AAPL,full,Parametric t,2266,31,1.368,1.0,2.781,0.0954,No
+AAPL,calm,Historical,754,11,1.459,1.0,1.4049,0.2359,No
+AAPL,calm,Parametric Normal,754,18,2.387,1.0,10.5526,0.0012,Yes
+AAPL,calm,Parametric t,754,11,1.459,1.0,1.4049,0.2359,No
+AAPL,stressed,Historical,232,6,2.586,1.0,4.1016,0.0428,Yes
+AAPL,stressed,Parametric Normal,232,9,3.879,1.0,11.238,0.0008,Yes
+AAPL,stressed,Parametric t,232,6,2.586,1.0,4.1016,0.0428,Yes
+TSLA,full,Historical,2266,33,1.456,1.0,4.1775,0.041,Yes
+TSLA,full,Parametric Normal,2266,42,1.853,1.0,13.321,0.0003,Yes
+TSLA,full,Parametric t,2266,32,1.412,1.0,3.4476,0.0633,No
+TSLA,calm,Historical,754,12,1.592,1.0,2.2591,0.1328,No
+TSLA,calm,Parametric Normal,754,13,1.724,1.0,3.2829,0.07,No
+TSLA,calm,Parametric t,754,12,1.592,1.0,2.2591,0.1328,No
+TSLA,stressed,Historical,232,6,2.586,1.0,4.1016,0.0428,Yes
+TSLA,stressed,Parametric Normal,232,7,3.017,1.0,6.1968,0.0128,Yes
+TSLA,stressed,Parametric t,232,7,3.017,1.0,6.1968,0.0128,Yes
