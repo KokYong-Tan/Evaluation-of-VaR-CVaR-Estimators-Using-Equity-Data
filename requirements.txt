@@ -1,0 +1,9 @@
+pandas>=2.0
+numpy>=1.25
+scipy>=1.11
+matplotlib>=3.7
+seaborn>=0.12
+pyarrow>=12.0
+wrds>=3.1
+jupyter>=1.0
+ipykernel>=6.0
