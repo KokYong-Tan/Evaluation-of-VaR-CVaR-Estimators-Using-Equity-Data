@@ -153,10 +153,10 @@ Results at n = 1,000 from `outputs/tables/04_normal_understatement.csv`. The Nor
 | Ticker | Method | Observed rate | Expected rate | LR | p-value | Reject H₀? |
 |---|---|---|---|---|---|---|
 | JPM | Historical | 1.19% | 1.0% | 0.2689 | 0.6041 | No ✓ |
-| JPM | **Parametric Normal** | **1.99%** | 1.0% | 5.7896 | 0.0161 | **Yes ✗** |
+| JPM | **Parametric Normal** | **1.99%** | 1.0% | **5.7896** | **0.0161** | **Yes ✗** |
 | JPM | Parametric t | 0.93% | 1.0% | 0.0400 | 0.8414 | No ✓ |
 | AAPL | Historical | 1.46% | 1.0% | 1.4049 | 0.2359 | No ✓ |
-| AAPL | **Parametric Normal** | **2.39%** | 1.0% | 10.5526 | 0.0012 | **Yes ✗** |
+| AAPL | **Parametric Normal** | **2.39%** | 1.0% | **10.5526** | **0.0012** | **Yes ✗** |
 | AAPL | Parametric t | 1.46% | 1.0% | 1.4049 | 0.2359 | No ✓ |
 | TSLA | Historical | 1.59% | 1.0% | 2.2591 | 0.1328 | No ✓ |
 | TSLA | Parametric Normal | 1.72% | 1.0% | 3.2829 | 0.0700 | No ✓ |
