@@ -1,6 +1,6 @@
 # AI Usage Disclosure
 
-## DS603 Group Project — Monte Carlo Evaluation of VaR and CVaR Estimators
+## DS603 Group Project — Evaluation of VaR and CVaR Estimators Using Equity Data
 
 ---
 
