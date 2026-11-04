@@ -1,4 +1,4 @@
-# Monte Carlo Evaluation of VaR and CVaR Estimators Using Real US Equity Return Data
+# Evaluation of VaR and CVaR Estimators Using Real US Equity Return Data
 
 **Course:** DS603, Master of Data Science in Economics (MDSE)  
 
@@ -71,7 +71,7 @@ project-repository/
 └── outputs/
     ├── figures/                 # All plots (see Key Results below)
     ├── tables/                  # Bias/RMSE/backtesting CSV summaries
-
+    ├── presentation/            # Presentation slides in PDF    
 ```
 
 ## 5. Setup and Execution Instructions
@@ -120,7 +120,7 @@ The project proceeds through four analytical stages, each with a direct DS603 co
 | Chebyshev inequality vs. Normal vs. empirical | Wk 4 moments and inequalities |
 | Historical/Normal/Student-t VaR and CVaR | Wk 5 quantile-based measures |
 | Student-t MLE as calibrated DGP | Wk 5 quantile-based measures |
-| Monte Carlo bias/SD/RMSE | Wk 8 Monte Carlo, LO7 |
+| Monte Carlo bias/SD/RMSE | Wk 8 Monte Carlo |
 | LLN/CLT convergence curves (RMSE ∝ 1/√n) | Wk 10 LLN/CLT |
 | Rolling backtest, Kupiec POF test | Wk 5 + applied probability |
 
@@ -158,6 +158,9 @@ Results at n = 1,000 from `outputs/tables/04_normal_understatement.csv`. The Nor
 | AAPL | Historical | 1.46% | 1.0% | No ✓ |
 | AAPL | **Parametric Normal** | **2.39%** | 1.0% | **Yes ✗** |
 | AAPL | Parametric t | 1.46% | 1.0% | No ✓ |
+| TSLA | Historical | 1.59% | 1.0% | No ✓ |
+| TSLA | Parametric Normal | 1.72% | 1.0% | No ✓ |
+| TSLA | Parametric t | 1.59% | 1.0% | No ✓ |
 
 In the stressed period (Feb–Dec 2020), all estimators are rejected — the i.i.d. assumption breaks down under the COVID regime shift, and Normal fails most severely (JPM Normal: 6.47% observed vs. 1.0% nominal). This validates the Monte Carlo finding on real, out-of-sample data.
 
