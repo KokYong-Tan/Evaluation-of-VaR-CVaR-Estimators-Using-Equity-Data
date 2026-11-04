@@ -130,7 +130,7 @@ The project proceeds through four analytical stages, each with a direct DS603 co
 
 | Ticker | SD (%) | Excess Kurtosis | JB p-value | Fitted ν (full) | Fitted ν (calm) | Fitted ν (stressed) |
 |---|---|---|---|---|---|---|
-| JPM | 1.72 | **13.9** | 0.000 | 2.98 | 4.12 | **2.68** |
+| JPM | 1.72 | **13.9** | 0.000 | 2.98 | 4.12 | 2.68 |
 | AAPL | 1.79 | **5.3** | 0.000 | 3.33 | 2.96 | 3.00 |
 | TSLA | 3.60 | **4.4** | 0.000 | 3.22 | 3.41 | 3.36 |
 
@@ -150,19 +150,37 @@ Results at n = 1,000 from `outputs/tables/04_normal_understatement.csv`. The Nor
 
 **Kupiec backtesting: calm period passes for Historical and t; Normal fails:**
 
+| Ticker | Method | Observed rate | Expected rate | LR | p-value | Reject H₀? |
+|---|---|---|---|---|---|---|
+| JPM | Historical | 1.19% | 1.0% | 0.2689 | 0.6041 | No ✓ |
+| JPM | **Parametric Normal** | **1.99%** | 1.0% | 5.7896 | 0.0161 | **Yes ✗** |
+| JPM | Parametric t | 0.93% | 1.0% | 0.0400 | 0.8414 | No ✓ |
+| AAPL | Historical | 1.46% | 1.0% | 1.4049 | 0.2359 | No ✓ |
+| AAPL | **Parametric Normal** | **2.39%** | 1.0% | 10.5526 | 0.0012 | **Yes ✗** |
+| AAPL | Parametric t | 1.46% | 1.0% | 1.4049 | 0.2359 | No ✓ |
+| TSLA | Historical | 1.59% | 1.0% | 2.2591 | 0.1328 | No ✓ |
+| TSLA | Parametric Normal | 1.72% | 1.0% | 3.2829 | 0.0700 | No ✓ |
+| TSLA | Parametric t | 1.59% | 1.0% | 2.2591 | 0.1328 | No ✓ |
+
+For a test at 5% significance, the critical value of χ²(1) is 3.84. If Likelihood Ratio LR > 3.84, we reject H₀ and conclude the model is mis-calibrated. 
+
+In **calm** markets, Historical and Student-t are well-calibrated. Normal generates more than ×2 the intended exceedances for AAPL. For TSLA, the calm-period count of 13 breaches is just below the rejection threshold. The pass is therefore inconclusive and not evidence that the Normal is well calibrated for TSLA.
+
+**Kupiec backtesting: stressed period fails for Historical Normal and t:**
+
 | Ticker | Method | Observed rate | Expected rate | Reject H₀? |
 |---|---|---|---|---|
-| JPM | Historical | 1.19% | 1.0% | No ✓ |
-| JPM | **Parametric Normal** | **1.99%** | 1.0% | **Yes ✗** |
-| JPM | Parametric t | 0.93% | 1.0% | No ✓ |
-| AAPL | Historical | 1.46% | 1.0% | No ✓ |
-| AAPL | **Parametric Normal** | **2.39%** | 1.0% | **Yes ✗** |
-| AAPL | Parametric t | 1.46% | 1.0% | No ✓ |
-| TSLA | Historical | 1.59% | 1.0% | No ✓ |
-| TSLA | Parametric Normal | 1.72% | 1.0% | No ✓ |
-| TSLA | Parametric t | 1.59% | 1.0% | No ✓ |
+| JPM | Historical | 4.31% | 1.0% | **Yes ✗** |
+| JPM | Parametric Normal | **6.47% | 1.0% | **Yes ✗** |
+| JPM | Parametric t | 4.31% | 1.0% | **Yes ✗** |
+| AAPL | Historical | 2.59% | 1.0% | **Yes ✗** |
+| AAPL | Parametric Normal | 3.88% | 1.0% | **Yes ✗** |
+| AAPL | Parametric t | 2.59% | 1.0% | **Yes ✗** |
+| TSLA | Historical | 2.59% | 1.0% | **Yes ✗** |
+| TSLA | Parametric Normal | 3.02% | 1.0% | **Yes ✗** |
+| TSLA | Parametric t | 3.02% | 1.0% | **Yes ✗** |
 
-In the stressed period (Feb–Dec 2020), all estimators are rejected — the i.i.d. assumption breaks down under the COVID regime shift, and Normal fails most severely (JPM Normal: 6.47% observed vs. 1.0% nominal). This validates the Monte Carlo finding on real, out-of-sample data.
+In the **stressed** period (Feb–Dec 2020), all estimators are rejected — the i.i.d. assumption breaks down under the COVID regime shift, and Normal fails most severely (JPM Normal: 6.47% observed vs. 1.0% nominal). This validates the Monte Carlo finding on real, out-of-sample data.
 
 **Return series with calm (green) and stressed (red) sub-period shading — GFC-scale COVID volatility is clearly visible for all three tickers:**
 
